@@ -4,12 +4,12 @@ const Header = () => {
   return (
     <div className="flex flex-col items-center text-white py-10 bg-gray-900">
       <img
-        src="/1749940239734.jpeg" // public klasörüne koyduysan başına / koymalısın
-        alt="Profil"
+        src="/1749940239734.jpeg" // Place the image in the public folder
+        alt="Profile"
         className="w-40 h-40 rounded-full mb-4 border-4 border-white shadow-lg"
       />
       <h1 className="text-3xl font-bold">Fatma Buse Borlu</h1>
-      <p className="text-gray-400">Bilgisayar Mühendisi | Web & Yapay Zeka</p>
+      <p className="text-gray-400">Computer Engineer | Web & AI Developer</p>
 
       <div className="flex gap-6 mt-4 text-2xl">
         {/* LinkedIn */}
@@ -34,20 +34,20 @@ const Header = () => {
           <FiGithub />
         </a>
 
-        {/* E-posta */}
+        {/* Email */}
         <a
           href="mailto:fatmabuseborlu@gmail.com"
-          title="Mail Gönder"
+          title="Send Email"
           className="hover:text-red-400 transition"
         >
           <FiMail />
         </a>
 
-        {/* CV indir */}
+        {/* Download CV */}
         <a
-          href="\Fatma Buse Borlu CV.pdf"
+          href="/Fatma Buse Borlu CV.pdf"
           download
-          title="CV İndir"
+          title="Download CV"
           className="hover:text-yellow-400 transition"
         >
           <FiDownload />

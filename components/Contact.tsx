@@ -13,29 +13,33 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_pl9e88q",     // EmailJS'deki Service ID
+        "service_pl9e88q",     // EmailJS Service ID
         "template_34mc28d",    // Template ID
         form.current,
-        "IPRvN-hZiUS5YLEnp"      // Public key (kullanıcı kimliği)
+        "IPRvN-hZiUS5YLEnp"    // Public key (user ID)
       )
       .then(
         () => {
-          alert("Mesajınız başarıyla gönderildi!");
+          alert("Your message has been sent successfully!");
           form.current?.reset();
         },
         (error) => {
-          console.error("Hata:", error.text);
-          alert("Mesaj gönderilemedi, lütfen tekrar deneyin.");
+          console.error("Error:", error.text);
+          alert("Failed to send the message. Please try again.");
         }
       );
   };
+
   return (
     <div className="bg-gray-900 text-white py-10 text-center">
-      {/* Gizli Form */}
+      {/* Hidden Form */}
       <form ref={form} className="hidden">
-        <input type="text" name="user_name" value="Ziyaretçi" readOnly />
-        <input type="email" name="user_email" value="ziyaretci@mail.com" readOnly />
-        <textarea name="user_message" defaultValue="Portfolyo sitesinden iletişim kuruldu." />
+        <input type="text" name="user_name" value="Visitor" readOnly />
+        <input type="email" name="user_email" value="visitor@mail.com" readOnly />
+        <textarea
+          name="user_message"
+          defaultValue="Contact initiated from the portfolio website."
+        />
       </form>
     </div>
   );

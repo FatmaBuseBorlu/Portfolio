@@ -8,9 +8,8 @@ import {
   SiTensorflow,
   SiMongodb,
   SiMysql,
-
 } from "react-icons/si";
-import { FaCode } from "react-icons/fa"; // C# alternatifi
+import { FaCode } from "react-icons/fa"; // C# alternative
 
 const TechStack = () => {
   const technologies = [
@@ -28,7 +27,7 @@ const TechStack = () => {
 
   return (
     <div className="bg-gray-800 text-white py-10">
-      <h2 className="text-center text-2xl font-bold mb-6">Kullandığım Teknolojiler</h2>
+      <h2 className="text-center text-2xl font-bold mb-6">My Tech Stack</h2>
       <div className="flex flex-wrap justify-center gap-6 px-4">
         {technologies.map((tech, index) => (
           <div
